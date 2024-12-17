@@ -21,26 +21,53 @@ Three models—**Logistic Regression**, **Naive Bayes**, and **K-Nearest Neighbo
 - **slope**: Slope of the peak exercise ST segment  
 
 ## **Steps to Run the Project**
-1. Clone or download this repository.  
-2. Install the required libraries using:
+
+1. **Clone or download** this repository:
+
+2. **Set up a virtual environment** (recommended):  
+   - On **Windows**:
+     ```bash
+     python -m venv venv
+     venv\Scripts\activate
+     ```
+   - On **Linux/Mac**:
+     ```bash
+     python3 -m venv venv
+     source venv/bin/activate
+     ```
+
+3. **Install the required libraries** in the virtual environment:
    ```bash
    pip install -r requirements.txt
    ```
-3. If you don't have **Jupyter Notebook**, install it along with the necessary kernel:
+
+4. If you don’t have **Jupyter Notebook**, install it with the necessary kernel:
    ```bash
    pip install notebook ipykernel
    ```
-4. Launch **Jupyter Notebook**:
+
+5. **Launch Jupyter Notebook**:
    ```bash
    jupyter notebook
    ```
-5. Open the notebook file (`heart_disease_prediction.ipynb`) and run the cells sequentially.
+
+6. Open the notebook file (`heart_disease_prediction.ipynb`) and run the cells sequentially.
+
+7. To **deactivate** the virtual environment when you're done:
+   ```bash
+   deactivate
+   ```
+
+### Why Use a Virtual Environment?
+A virtual environment:
+- Keeps your project dependencies isolated from the global Python environment.  
+- Avoids conflicts with different library versions across projects.  
+- Makes the project portable and clean.
 
 ## **Data Preprocessing**
 - Missing values were handled by imputing the mean.  
 - Features were standardized using `StandardScaler` from `scikit-learn`.  
 - No significant class imbalance was found, so SMOTE or resampling was not applied.
-
 
 ## **Model Comparison**
 Three machine learning models were implemented:
@@ -60,7 +87,7 @@ Three machine learning models were implemented:
 - Naive Bayes showed competitive performance but slightly lower accuracy.  
 - KNN had the lowest accuracy, possibly due to sensitivity to noise and the small dataset.
 
----
+
 
 ## **Visualizations and Insights**
 1. **Feature Correlation Heatmap**:  
@@ -70,12 +97,12 @@ Three machine learning models were implemented:
 2. **Model Comparison Visualization**:  
    - A bar chart comparing the accuracy of all three models shows Logistic Regression as the top performer.  
 
----
+
 
 ## **Conclusion**
 Logistic Regression outperformed Naive Bayes and KNN, likely due to its ability to handle linear relationships within the dataset. This project demonstrates that machine learning can be a powerful tool for early detection of heart disease, aiding healthcare professionals in timely intervention.
 
----
+
 
 ## **Acknowledgments**
 - **UCI Machine Learning Repository** for providing the dataset.
